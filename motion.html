@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Graphics</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Motion Graphics</h1>
+      <p class="subtitle">Gift pack design for a new product launch</p>
+    </header>
+
+    <main class="portfolio-showcase">
+      <div class="image-gallery">
+        <img
+          src="Portfolio/"
+          alt="Car Loop"
+          class="showcase-image"
+          data-video="Portfolio/Car loop final.mp4"
+        />
+        <img
+          src="Portfolio/"
+          alt="Motion Graphics"
+          class="showcase-image"
+          data-video="Portfolio/Motion Graphics final 2.mp4"
+        />
+        <img
+          src="Portfolio/"
+          alt="Taxi Advert"
+          class="showcase-image"
+          data-video="Portfolio/TAXI ADVERT (1).mp4"
+        />
+      </div>
+
+      <section>
+        <h2>Project Description</h2>
+        <p>
+          This motion graphics project highlights dynamic visuals crafted to
+          promote a high-end gift pack for a major product launch. Designed for
+          digital and outdoor media, each animation showcases the product's
+          unique selling points with sleek transitions, vibrant colors, and
+          urban-inspired energy. The visuals were tailored to engage busy
+          professionals and elevate the brand's premium identity across
+          platforms.
+        </p>
+
+        <h3>Tools Used</h3>
+        <ul>
+          <li>Adobe After Effects</li>
+          <li>Premiere Pro</li>
+          <li>Illustrator</li>
+        </ul>
+      </section>
+
+      <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+    </main>
+
+    <!-- Modal with video -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <video controls id="portfolioVideo">
+          <source id="videoSource" src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <script src="motion.js"></script>
+  </body>
+</html>

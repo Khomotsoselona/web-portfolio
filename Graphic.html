@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graphic Design - PDF Modal Viewer</title>
+  <link rel="stylesheet" href="portfolio.css" />
+
+
+  <header>
+    <h1>Graphic Design</h1>
+    <p class="subtitle">Minimal, clean layout for company stationery</p>
+  </header>
+
+  <main class="portfolio-showcase">
+    <div class="image-gallery">
+      <img
+        src="Portfolio/"
+        alt="Magazine Layout"
+        class="showcase-image"
+        data-pdf="Portfolio/Khomotso (1).pdf"
+      />
+      <img
+        src="Portfolio/"
+        alt="Magazine cover"
+        class="showcase-image"
+        data-pdf="Portfolio/Khomotso_Selona_NIM_2024_010.pdf"
+      />
+      <img
+        src="Portfolio/"
+        alt="Shutter speed Layout"
+        class="showcase-image"
+        data-pdf="Portfolio/Khomotso. (0).pdf"
+      />
+    </div>
+
+    <section>
+      <h2>Project Description</h2>
+      <p>
+        This project involved creating a minimalistic and clean design layout
+        for corporate stationery. The focus was on clear typography, balanced
+        spacing, and a professional color palette to reflect the brand’s
+        identity.
+      </p>
+
+      <h3>Tools Used</h3>
+      <ul>
+        <li>Adobe Illustrator</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe InDesign</li>
+      </ul>
+    </section>
+
+    <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+  </main>
+
+  <!-- Modal -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="modal-close">&times;</span>
+      <iframe id="pdfFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
+
