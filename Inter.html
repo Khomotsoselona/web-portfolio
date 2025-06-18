@@ -5,6 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integrated Design</title>
     <link rel="stylesheet" href="Inter.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: #006600;
+        color: white;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .portfolio-showcase {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .card img {
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+      }
+
+      .hover-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-weight: bold;
+      }
+
+      .card:hover .hover-button {
+        opacity: 1;
+      }
+
+      section {
+        margin-top: 2rem;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #006600;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .modal-content {
+        position: relative;
+        margin: 5% auto;
+        width: 80%;
+        height: 80%;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -14,18 +124,30 @@
 
     <main class="portfolio-showcase">
       <div class="image-gallery">
-        <img
-          src="Portfolio/green1.jpg"
-          alt="Logo Design"
-          class="showcase-image"
-          data-pdf="Portfolio/FINAL LOGO.pdf"
-        />
-        <img
-          src="Portfolio/green1.jpg"
-          alt="Logo Design"
-          class="showcase-image"
-          data-pdf="Portfolio/Final_Logos Themba_Jones.pdf"
-        />
+        <div class="card" data-pdf="Portfolio/FINAL LOGO.pdf">
+          <img src="Portfolio/green1.jpg" alt="Logo Design" />
+          <div class="hover-button">View PDF</div>
+        </div>
+
+        <div class="card" data-pdf="Portfolio/Final_Logos Themba_Jones.pdf">
+          <img src="Portfolio/green1.jpg" alt="Logo Design" />
+          <div class="hover-button">View PDF</div>
+        </div>
+
+        <div class="card" data-pdf="Portfolio/Brochure Themba_ Jones.pdf">
+          <img src="Portfolio/green1.jpg" alt="Logo Design" />
+          <div class="hover-button">View PDF</div>
+        </div>
+
+        <div class="card" data-pdf="Portfolio/Business card (3).pdf">
+          <img src="Portfolio/green1.jpg" alt="Logo Design" />
+          <div class="hover-button">View PDF</div>
+        </div>
+
+        <div class="card" data-pdf="Portfolio/Letter head final (1).pdf">
+          <img src="Portfolio/green1.jpg" alt="Logo Design" />
+          <div class="hover-button">View PDF</div>
+        </div>
       </div>
 
       <section>
@@ -40,7 +162,6 @@
         <h3>Tools Used</h3>
         <ul>
           <li>Adobe Illustrator</li>
-
           <li>InDesign</li>
         </ul>
       </section>
@@ -56,6 +177,31 @@
       </div>
     </div>
 
-    <script src="portfolio.js"></script>
+    <script>
+      const cards = document.querySelectorAll(".card");
+      const modal = document.getElementById("pdfModal");
+      const pdfFrame = document.getElementById("pdfFrame");
+      const modalClose = document.getElementById("modalClose");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const pdfSrc = card.getAttribute("data-pdf");
+          pdfFrame.src = pdfSrc;
+          modal.style.display = "block";
+        });
+      });
+
+      modalClose.addEventListener("click", () => {
+        modal.style.display = "none";
+        pdfFrame.src = "";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          pdfFrame.src = "";
+        }
+      });
+    </script>
   </body>
 </html>

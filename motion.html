@@ -6,6 +6,7 @@
     <title>Motion Graphics</title>
     <link rel="stylesheet" href="motion.css" />
   </head>
+
   <body>
     <header>
       <h1>Motion Graphics</h1>
@@ -14,24 +15,49 @@
 
     <main class="portfolio-showcase">
       <div class="image-gallery">
-        <img
-          src="Portfolio/red 1.jpg"
-          alt="Car Loop"
-          class="showcase-image"
-          data-video="Portfolio/Car loop final.mp4"
-        />
-        <img
-          src="Portfolio/red 1.jpg"
-          alt="Motion Graphics"
-          class="showcase-image"
-          data-video="Portfolio/Motion Graphics final 2.mp4"
-        />
-        <img
-          src="Portfolio/red 1.jpg"
-          alt="Taxi Advert"
-          class="showcase-image"
-          data-video="Portfolio/TAXI ADVERT (1).mp4"
-        />
+        <!-- Each card has a video file in data-video -->
+        <div class="card" data-video="Portfolio/Car loop final.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Car Loop" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/Motion Graphics final 2.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Motion Graphics" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/TAXI ADVERT (1).mp4">
+          <img src="Portfolio/red 1.jpg" alt="Taxi Advert 1" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/Carrol Boyes add.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Carrol Boyes Ad" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/Pop up add.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Pop-up Ad" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/pop up add_3.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Pop-up Ad 3" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div class="card" data-video="Portfolio/Bunny hop.mp4">
+          <img src="Portfolio/red 1.jpg" alt="Bunny Hop" />
+          <div class="hover-button">Play Video</div>
+        </div>
+
+        <div
+          class="card"
+          data-video="Portfolio/KGOMOTSO_Infographic_NIM2024-010.mp4"
+        >
+          <img src="Portfolio/red 1.jpg" alt="Infographic" />
+          <div class="hover-button">Play Video</div>
+        </div>
       </div>
 
       <section>
@@ -57,11 +83,11 @@
       <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
     </main>
 
-    <!-- Modal with video -->
+    <!-- Modal -->
     <div id="videoModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <video controls id="portfolioVideo">
+        <video id="portfolioVideo" controls>
           <source id="videoSource" src="" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

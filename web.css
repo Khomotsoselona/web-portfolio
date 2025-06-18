@@ -10,7 +10,7 @@ body {
 /* Header */
 header {
   text-align: center;
-  background: #2c3e50;
+  background: #006dd3;
   color: white;
   padding: 20px 10px;
 }
@@ -120,7 +120,7 @@ body {
 /* Header Styling */
 header {
   text-align: center;
-  background: #2c3e50;
+  background: #884d00;
   color: white;
   padding: 20px;
 }
@@ -193,4 +193,36 @@ ul li {
 
 .back-link:hover {
   color: #3498db;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover .overlay-caption {
+  opacity: 1;
+}
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.hover-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .hover-button {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }
