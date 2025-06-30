@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="Photography.css" />
   </head>
   <body>
+    <!-- 🎥 Background Video -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="Portfolio/215696_medium.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
     <header>
       <h1>Photography</h1>
-      <p class="subtitle">Black & white identity and lifestyle compositions</p>
+      <p class="subtitle"></p>
     </header>
 
     <main class="portfolio-showcase">
@@ -61,6 +68,23 @@
       <img id="modalImage" class="modal-content" />
     </div>
 
-    <script src="Photography.js"></script>
+    <script>
+      function openModal(src) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("imageModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+
+      // Optional: Close modal on click outside image
+      window.onclick = function (e) {
+        const modal = document.getElementById("imageModal");
+        if (e.target === modal) {
+          closeModal();
+        }
+      };
+    </script>
   </body>
 </html>

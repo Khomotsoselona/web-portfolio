@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="marketing.css" />
   </head>
   <body>
+    <!-- 🎥 Background Video -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="Portfolio/215696_medium.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
     <header>
       <h1>Marketing Communications</h1>
-      <p class="subtitle">Gift pack design for a new product launch</p>
+      <p class="subtitle"></p>
     </header>
 
     <main class="portfolio-showcase">
       <div class="image-gallery">
         <div class="card">
-          <img src="Portfolio/blue1.jpg" alt="ADD" class="showcase-image" />
+          <img src="Portfolio/blue1.jpg" alt="Ad" class="showcase-image" />
           <button class="hover-button" onclick="openImage('Portfolio/12p.png')">
             View
           </button>
@@ -24,7 +31,7 @@
         <div class="card">
           <img
             src="Portfolio/blue1.jpg"
-            alt="Pop up add"
+            alt="Pop-up Ad"
             class="showcase-image"
           />
           <button
@@ -103,12 +110,23 @@
       <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
     </main>
 
-    <!-- Modal -->
+    <!-- 🖼 Modal Viewer -->
     <div id="mediaModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
       <div class="modal-content" id="modalContent"></div>
     </div>
 
-    <script src="portfolio.js"></script>
+    <script>
+      function openImage(src) {
+        const modal = document.getElementById("mediaModal");
+        const content = document.getElementById("modalContent");
+        content.innerHTML = `<img src="${src}" alt="Full View">`;
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("mediaModal").style.display = "none";
+      }
+    </script>
   </body>
 </html>

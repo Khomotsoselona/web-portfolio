@@ -1,228 +1,141 @@
-/* General Styles */
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* Header */
-header {
-  text-align: center;
-  background: #006dd3;
-  color: white;
-  padding: 20px 10px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 5px;
-}
-
-/* Portfolio Showcase */
-.portfolio-showcase {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Image Gallery */
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  justify-items: center;
-}
-
-.showcase-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.showcase-image:hover {
-  transform: scale(1.05);
-}
-
-/* Section Styling */
-section {
-  margin-top: 30px;
-}
-
-h2 {
-  color: #2c3e50;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding: 5px 0;
-}
-
-/* Back Link */
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #2c3e50;
-  transition: color 0.3s ease;
-}
-
-.back-link:hover {
-  color: #3498db;
-}
-
-/* Modal */
-.modal {
-  display: none;
+/* ===== Background Video Setup ===== */
+.bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  z-index: -1;
 }
 
-.close {
-  color: #e74c3c;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-/* General Page Styling */
+/* ===== General Page Styling ===== */
 body {
-  font-family: "Arial", sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
-/* Header Styling */
+/* ===== Header ===== */
 header {
   text-align: center;
-  background: #884d00;
-  color: white;
-  padding: 20px;
+  padding: 2rem 1rem;
+  background: transparent;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-style: italic;
+  color: #ccc;
+  margin-top: 0.5rem;
 }
 
-/* Portfolio Showcase */
-.portfolio-showcase {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* ===== Container ===== */
+.content-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Image Gallery */
+/* ===== Gallery ===== */
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .showcase-image {
   width: 100%;
   height: auto;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  display: block;
+  border-radius: 12px;
 }
 
-.showcase-image:hover {
-  transform: scale(1.05);
-}
-
-/* Section Styling */
-section {
-  margin-top: 30px;
-  padding: 10px;
-}
-
-h2 {
-  color: #2c3e50;
-}
-
-/* Tools Used List */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding: 8px 0;
-  font-weight: bold;
-}
-
-/* Back Link */
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #2c3e50;
-  transition: color 0.3s ease;
-}
-
-.back-link:hover {
-  color: #3498db;
-}
-.card:hover img {
-  transform: scale(1.05);
-}
-
-.card:hover .overlay-caption {
-  opacity: 1;
-}
-.card {
-  position: relative;
-  width: 100%;
-}
-
+/* ===== Hover Button ===== */
 .hover-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
-  transform: translateX(-50%);
-  background: #3498db;
+  transform: translateX(-50%) translateY(10px);
+  background: #007acc;
   color: white;
   border: none;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  border-radius: 5px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border-radius: 6px;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .card:hover .hover-button {
   opacity: 1;
-  transform: translateX(-50%) translateY(-5px);
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Project Info ===== */
+.project-info h2 {
+  color: #fff;
+}
+
+.project-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.project-info ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #ddd;
+}
+
+.project-info li {
+  padding: 4px 0;
+}
+
+/* ===== Back Link ===== */
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }

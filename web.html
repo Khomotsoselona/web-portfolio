@@ -7,36 +7,50 @@
     <link rel="stylesheet" href="web.css" />
   </head>
   <body>
+    <!-- 🎥 Background Video -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="Portfolio/215696_medium.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
     <header>
       <h1>Web Development</h1>
-      <p class="subtitle">Custom gift set design concept</p>
+      <p class="subtitle"></p>
     </header>
 
-    <main class="portfolio-showcase">
-      <div class="image-gallery">
-        <a href="https://weather-dtvu.vercel.app" target="_blank">
-          <img
-            src="Portfolio/orange 1.jpg"
-            alt="Weather App"
-            class="showcase-image"
-          />
-        </a>
+    <main class="content-container">
+      <section class="image-gallery">
+        <div class="card">
+          <a href="https://weather-dtvu.vercel.app" target="_blank">
+            <img
+              src="Portfolio/orange 1.jpg"
+              alt="Weather App"
+              class="showcase-image"
+            />
+            <button class="hover-button">View Weather App</button>
+          </a>
+        </div>
 
-        <a href="https://calculator-seven-xi-65.vercel.app/" target="_blank">
-          <img
-            src="Portfolio/orange 1.jpg"
-            alt="Calculator App"
-            class="showcase-image"
-          />
-        </a>
-      </div>
+        <div class="card">
+          <a href="https://calculator-seven-xi-65.vercel.app/" target="_blank">
+            <img
+              src="Portfolio/orange 1.jpg"
+              alt="Calculator App"
+              class="showcase-image"
+            />
+            <button class="hover-button">View Calculator App</button>
+          </a>
+        </div>
+      </section>
 
-      <section>
+      <section class="project-info">
         <h2>Project Description</h2>
         <p>
-          This web development project focused on creating an interactive
-          product showcase. Emphasis was placed on responsive design, clean
-          HTML/CSS structure, and user engagement.
+          This web development project focused on creating interactive web
+          applications such as a weather app and a calculator. Emphasis was
+          placed on responsive design, clean HTML/CSS structure, and intuitive
+          user experience.
         </p>
 
         <h3>Tools Used</h3>
@@ -45,9 +59,9 @@
           <li>CSS</li>
           <li>JavaScript</li>
         </ul>
-      </section>
 
-      <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+        <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+      </section>
     </main>
   </body>
 </html>
